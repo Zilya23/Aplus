@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplus.AuthorizationPage"
+             Background="white">
+    <ContentPage.Content>
+        <StackLayout  VerticalOptions="CenterAndExpand">
+            <Image Source="image9.png" Aspect="AspectFit" />
+            
+            <StackLayout>
+                <Entry Placeholder="Логин" BackgroundColor="#E8E8E8" PlaceholderColor="Black"/>
+                <Entry Placeholder="Пароль" IsPassword="True" BackgroundColor="#E8E8E8" PlaceholderColor="Black"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button Text="Зарегистрироваться" HorizontalOptions="Start" BackgroundColor="#00B2FF" TextColor="White" BorderRadius="45" WidthRequest="200"/>
+                <Button Text="Войти" HorizontalOptions="End" BackgroundColor="#00B2FF" TextColor="White" BorderRadius="45" WidthRequest="200"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
