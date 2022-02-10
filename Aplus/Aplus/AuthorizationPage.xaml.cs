@@ -21,5 +21,10 @@ namespace Aplus
         {
             await Navigation.PushAsync(new RegistrationPage());
         }
+
+        private async void btn_Authoriz_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProjectsPage());
+        }
     }
 }
