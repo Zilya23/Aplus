@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Aplus
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AuthorizationPage : ContentPage
+    public partial class RegistrationPage : ContentPage
     {
-        public AuthorizationPage()
+        public RegistrationPage()
         {
             InitializeComponent();
-        }
-
-        private async void btn_Regist_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new RegistrationPage());
         }
     }
 }
