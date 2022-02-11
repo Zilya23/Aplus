@@ -16,8 +16,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Entry Placeholder="Логин" BackgroundColor="#E8E8E8" PlaceholderColor="Black" Margin="15"/>
-            <Entry Placeholder="E-mail" IsPassword="True" BackgroundColor="#E8E8E8" PlaceholderColor="Black" Margin="15"/>
-            <Entry Placeholder="Пароль" BackgroundColor="#E8E8E8" PlaceholderColor="Black" Margin="15"/>
+            <Entry Placeholder="E-mail" BackgroundColor="#E8E8E8" PlaceholderColor="Black" Margin="15"/>
+            <Entry Placeholder="Пароль" IsPassword="True" BackgroundColor="#E8E8E8" PlaceholderColor="Black" Margin="15"/>
             <Entry Placeholder="Пароль" IsPassword="True" BackgroundColor="#E8E8E8" PlaceholderColor="Black" Margin="15"/>
             <Button x:Name="btn_Regist" Text="Зарегистрироваться" HorizontalOptions="Center" BackgroundColor="#00B2FF" TextColor="White" BorderRadius="45" WidthRequest="200" VerticalOptions="EndAndExpand" Margin="0,0,0,50"/>
         </StackLayout>
