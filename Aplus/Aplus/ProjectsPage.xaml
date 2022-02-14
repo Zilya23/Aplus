@@ -3,24 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aplus.ProjectsPage"
              BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
              Visual = "Material">
     <NavigationPage.TitleView>
-        <StackLayout  Padding="0,0,20,0" Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal">
             <Label Text="Проекты" 
-                   TextColor="White" 
-                   FontSize="Title" 
-                   HorizontalTextAlignment="Center"/>
-            <Label x:Name="Add"
-                   FontFamily="AplusFont"
-                   FontSize="Title"
-                   HorizontalOptions="EndAndExpand"
-                   Text="&#xe145;"
+                   FontSize="Large"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"  
                    TextColor="White"/>
+            <Label FontFamily="ProjectFont"
+                FontSize="Large"
+                Text="&#xe145;"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="End"
+                TextColor="White"
+                Padding="10"
+                Margin="10">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
-    <ContentPage.Content>
+    <ScrollView>
         <StackLayout>
-            
+            <ListView x:Name="projects_lv" SeparatorColor="Black" ItemsSource="{Binding}"  ItemSelected="projects_lv_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Padding="10" Text="{Binding NameProject}" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>
