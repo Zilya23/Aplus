@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aplus.EditProjectPage"
+             Background="White"
+             Visual="Material">
+    <NavigationPage.TitleView>
+        <StackLayout Padding="0,0,20,0" Orientation="Horizontal">
+            <Label Text="Изменить"
+                   TextColor="White"
+                   FontSize="Large"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+            <Label FontFamily="ProjectFont"
+                   Text="&#xe872;"
+                   TextColor="White"
+                   Padding="10"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="End"
+                   FontSize="Title">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30" Spacing="20">
+                <Entry Text="{Binding NameProject}" Placeholder="Имя проекта" />
+                <Editor Text="{Binding Description}" Placeholder="Описание"/>
+                <Entry Text="{Binding NumberPhone}" Placeholder="Телефон №1"/>
+                <Entry Text="{Binding Email}" Placeholder="E-mail"/>
+                <Entry Text="{Binding Address}" Placeholder="Адрес"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                    <Button Text="Отмена"
+                            x:Name="btn_cancel"
+                            Clicked="btn_cancel_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Изменить"
+                            x:Name="btn_edit"
+                            Clicked="btn_edit_Clicked"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

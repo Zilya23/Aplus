@@ -18,12 +18,12 @@ namespace Aplus
             InitializeComponent();
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            //var project = (Project)BindingContext;
-            //EditProjectPage projectPage = new EditProjectPage();
-            //projectPage.BindingContext = project;
-            //await Navigation.PushAsync(projectPage);
+            var project = (Project)BindingContext;
+            EditProjectPage projectPage = new EditProjectPage();
+            projectPage.BindingContext = project;
+            await Navigation.PushAsync(projectPage);
         }
     }
 }
