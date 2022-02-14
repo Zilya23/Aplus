@@ -3,6 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Aplus.ProjectTabbedPage">
   <!--Pages can be added as references or inline-->
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding NameProject}"
+                   TextColor="White"
+                   FontSize="Title"
+                   x:Name="lbl_namepr" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Label HorizontalOptions="EndAndExpand"
+                   FontFamily="ProjectFont"
+                   Text="&#xe3c9;"
+                   Padding="10"
+                   TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
   <ContentPage Title="О ПРОЕКТЕ" />
   <ContentPage Title="КАРТИНКИ" />
   <ContentPage Title="КОНТАКТЫ" />

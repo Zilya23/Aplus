@@ -12,7 +12,7 @@
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand"  
                    TextColor="White"/>
-            <Label FontFamily="ProjectFont"
+            <Label FontFamily="AplusFont"
                 FontSize="Large"
                 Text="&#xe145;"
                 VerticalOptions="CenterAndExpand"
@@ -21,7 +21,7 @@
                 Padding="10"
                 Margin="10">
             <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
             </Label.GestureRecognizers>
             </Label>
         </StackLayout>

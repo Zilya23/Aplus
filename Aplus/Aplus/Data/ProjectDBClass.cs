@@ -6,7 +6,7 @@ using Aplus.Models;
 
 namespace Aplus.Data
 {
-    class ProjectDBClass
+    public class ProjectDBClass
     {
         readonly SQLiteConnection db;
         public ProjectDBClass(string connectionString)

@@ -20,17 +20,29 @@ namespace Aplus
         }
         protected override void OnAppearing()
         {
-            projects_lv.ItemsSource = App.
+            projects_lv.ItemsSource = App.ProjectDBClass.GetProject();
             base.OnAppearing();
         }
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
 
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
         }
 
-        private void projects_lv_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
+            Project project = new Project();
+            AddProjectPage projectPage = new AddProjectPage();
+            projectPage.BindingContext = project;
+            await Navigation.PushAsync(projectPage);
+        }
 
+        private async void projects_lv_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Project projectSel = (Project)e.SelectedItem;
+            ProjectTabbedPage informationProject = new ProjectTabbedPage();
+            informationProject.BindingContext = projectSel;
+            await Navigation.PushAsync(informationProject);
         }
     }
 }
