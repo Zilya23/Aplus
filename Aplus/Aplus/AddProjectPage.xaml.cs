@@ -18,12 +18,7 @@ namespace Aplus
             InitializeComponent();
         }
 
-        private void btn_add_Clicked(object sender, EventArgs e)
-        {
-            this.Navigation.PopAsync();
-        }
-
-        private async void btn_cancel_Clicked(object sender, EventArgs e)
+        private async void btn_add_Clicked(object sender, EventArgs e)
         {
             var project = (Project)BindingContext;
             if (!String.IsNullOrEmpty(project.NameProject))
@@ -31,6 +26,11 @@ namespace Aplus
                 App.ProjectDBClass.SaveProject(project);
             }
             await this.Navigation.PopAsync();
+        }
+
+        private void btn_cancel_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PopAsync();
         }
     }
 }
